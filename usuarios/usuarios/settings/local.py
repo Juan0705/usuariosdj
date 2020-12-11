@@ -24,3 +24,10 @@ STATICFILES_DIRS = [BASE_DIR.child('static')]
 MEDIA_URL = '/media/'
 # dentro de la carpeta media estan guardados los archivos multimedia (imagenes, musica, etc)
 MEDIA_ROOT = BASE_DIR.child('media')
+
+# MAIL SETTINGS
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com' # depende del proveedor de correo
+EMAIL_HOST_USER = get_secret('EMAIL')
+EMAIL_HOST_PASSWORD = get_secret('PASS_EMAIL')
+EMAIL_PORT = 587
